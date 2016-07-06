@@ -1,7 +1,11 @@
-<project>
+<project name="ant-build-example" default="run" basedir=".">
 	<!-- global properties -->
 	<property name="src"	value="src"			/>
 	<property name="build"	value="classes"		/>
+	
+	<path id="project.class.path">
+		<pathelement location="${build}" />
+	</path>
 	
 	<target name="prepare">
 		<tstamp/>
